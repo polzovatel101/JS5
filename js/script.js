@@ -17,25 +17,13 @@ $(function() {
 
 $(function () {
     var $withSubmenu = $('.with_submenu');
-    var $withSubsubmenu = $('.with_subsubmenu');
-    var $submenu = $('.submenu');
-    var $subsubmenu = $('.subsubmenu');
 
     $withSubmenu.on('mouseenter', function () {
         console.log(this);
-        $submenu.show(300); //animate({display: 'block', backgroundColor: 'green'}, 150); //attr('style', 'display: block');
+        $(this).find('.submenu').first().fadeIn(300); //animate({display: 'block', backgroundColor: 'green'}, 150); //attr('style', 'display: block');
     });
 
     $withSubmenu.on('mouseleave', function () {
-        $submenu.hide(100);//removeAttr('style', 'display: block');
+        $(this).children().first().fadeOut(100);//removeAttr('style', 'display: block');
     });
-
-    $withSubsubmenu.on('mouseenter', function () {
-        console.log(this);
-        $subsubmenu.show(300);//attr({'style': 'display: block'});
-    });
-
-    $withSubsubmenu.on('mouseleave', function () {
-        $subsubmenu.hide(100);//removeAttr('style', 'display: block');
-    })
 });
