@@ -120,6 +120,7 @@ label:hover:before {
 }
 
 .menu_item{
+    position: relative;
     display: inline-block;
     background-color: #5c6768;
     padding: 20px;
@@ -130,25 +131,16 @@ label:hover:before {
     display: none;
     position: absolute;
     top: 58px;
-    left: 267px;
+    left: 0;
     background-color: #7f8c8d;
 }
 
-.submenu_item{
+.submenu_item {
     margin: 10px;
 }
 
-.subsubmenu{
-    display: none;
-    width: 100px;
-    position: absolute;
-    top: 34px;
-    left: 154px;
-    background-color: #A7B6B7;
-}
-
-.subsubmenu_item{
-    margin: 10px;
+.submenu .submenu{
+    left: 125px;
 }
 
 .nav-menu{
