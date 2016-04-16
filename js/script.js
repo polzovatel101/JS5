@@ -20,10 +20,10 @@ $(function () {
 
     $withSubmenu.on('mouseenter', function () {
         console.log(this);
-        $(this).find('.submenu').first().fadeIn(300); //animate({display: 'block', backgroundColor: 'green'}, 150); //attr('style', 'display: block');
+        $(this).find('.submenu').animate({ backgroundColor: '#fff'}, 300).first().fadeIn(300); //animate({display: 'block', backgroundColor: 'green'}, 150); //attr('style', 'display: block');
     });
 
     $withSubmenu.on('mouseleave', function () {
-        $(this).children().first().fadeOut(100);//removeAttr('style', 'display: block');
+        $(this).children().first().fadeOut(100); //removeAttr('style', 'display: block');
     });
 });
